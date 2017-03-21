@@ -13,6 +13,10 @@
 		28CBB0671E81081900755F8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CBB0651E81081900755F8C /* Main.storyboard */; };
 		28CBB0691E81081900755F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28CBB0681E81081900755F8C /* Assets.xcassets */; };
 		28CBB06C1E81081900755F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CBB06A1E81081900755F8C /* LaunchScreen.storyboard */; };
+		28CBB0751E81097400755F8C /* NGScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CBB0741E81097400755F8C /* NGScrollTextView.m */; };
+		28CBB0781E810AA100755F8C /* NGScrollContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CBB0771E810AA100755F8C /* NGScrollContentView.m */; };
+		28CBB07B1E811BFA00755F8C /* notifyIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28CBB0791E811BFA00755F8C /* notifyIcon@2x.png */; };
+		28CBB07C1E811BFA00755F8C /* notifyIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28CBB07A1E811BFA00755F8C /* notifyIcon@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,12 @@
 		28CBB0681E81081900755F8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28CBB06B1E81081900755F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28CBB06D1E81081900755F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28CBB0731E81097400755F8C /* NGScrollTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGScrollTextView.h; path = NGScrollTextView/NGScrollTextView.h; sourceTree = "<group>"; };
+		28CBB0741E81097400755F8C /* NGScrollTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGScrollTextView.m; path = NGScrollTextView/NGScrollTextView.m; sourceTree = "<group>"; };
+		28CBB0761E810AA100755F8C /* NGScrollContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGScrollContentView.h; path = NGScrollTextView/NGScrollContentView.h; sourceTree = "<group>"; };
+		28CBB0771E810AA100755F8C /* NGScrollContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGScrollContentView.m; path = NGScrollTextView/NGScrollContentView.m; sourceTree = "<group>"; };
+		28CBB0791E811BFA00755F8C /* notifyIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notifyIcon@2x.png"; sourceTree = "<group>"; };
+		28CBB07A1E811BFA00755F8C /* notifyIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notifyIcon@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,10 @@
 		28CBB0501E81081900755F8C = {
 			isa = PBXGroup;
 			children = (
+				28CBB0761E810AA100755F8C /* NGScrollContentView.h */,
+				28CBB0771E810AA100755F8C /* NGScrollContentView.m */,
+				28CBB0731E81097400755F8C /* NGScrollTextView.h */,
+				28CBB0741E81097400755F8C /* NGScrollTextView.m */,
 				28CBB05B1E81081900755F8C /* NGScrollTextView */,
 				28CBB05A1E81081900755F8C /* Products */,
 			);
@@ -58,6 +72,8 @@
 		28CBB05B1E81081900755F8C /* NGScrollTextView */ = {
 			isa = PBXGroup;
 			children = (
+				28CBB0791E811BFA00755F8C /* notifyIcon@2x.png */,
+				28CBB07A1E811BFA00755F8C /* notifyIcon@3x.png */,
 				28CBB05F1E81081900755F8C /* AppDelegate.h */,
 				28CBB0601E81081900755F8C /* AppDelegate.m */,
 				28CBB0621E81081900755F8C /* ViewController.h */,
@@ -105,6 +121,7 @@
 		28CBB0511E81081900755F8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = NG;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Nelson;
 				TargetAttributes = {
@@ -137,9 +154,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28CBB07B1E811BFA00755F8C /* notifyIcon@2x.png in Resources */,
 				28CBB06C1E81081900755F8C /* LaunchScreen.storyboard in Resources */,
 				28CBB0691E81081900755F8C /* Assets.xcassets in Resources */,
 				28CBB0671E81081900755F8C /* Main.storyboard in Resources */,
+				28CBB07C1E811BFA00755F8C /* notifyIcon@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +170,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				28CBB0641E81081900755F8C /* ViewController.m in Sources */,
+				28CBB0751E81097400755F8C /* NGScrollTextView.m in Sources */,
 				28CBB0611E81081900755F8C /* AppDelegate.m in Sources */,
 				28CBB05E1E81081900755F8C /* main.m in Sources */,
+				28CBB0781E810AA100755F8C /* NGScrollContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

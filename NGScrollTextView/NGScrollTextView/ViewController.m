@@ -8,17 +8,36 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+#import "NGScrollTextView.h"
+
+@interface ViewController ()<NGScrollTextViewDelegate>
+
+@property (nonatomic,strong) NGScrollTextView * scrollTextView;
 
 @end
 
 @implementation ViewController
 
+- (NGScrollTextView *)scrollTextView
+{
+    if (!_scrollTextView) {
+        _scrollTextView = [[NGScrollTextView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 50) Delegate:self];
+    }
+    return _scrollTextView;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self.view addSubview:self.scrollTextView];
+    
+    NSArray * arr = @[@{@"content":@"测试内容1测试内容1测试内容1测试内容1测试内容1测试内容1"},@{@"content":@"测试内容2测试内容2测试内容2测试内容2测试内容2测试内容2测试内容2测试内容2"},@{@"content":@"测试内容3"}];
+    [self.scrollTextView setDataWithImage:@"notifyIcon" contentArr:arr];
 }
 
+-(void)clickScrollTextMessage:(NSDictionary *)dict
+{
+    NSLog(@"touch %@",dict);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
